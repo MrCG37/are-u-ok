@@ -114,7 +114,7 @@ class Job:
 
     @staticmethod
     def _unexpected_exception(error: Exception = None) -> str:
-        return f'网络错误或其他错误\n{error}'
+        return f'遇到网络错误或其他错误\n{error}'
 
     def _login(self) -> (bool, str):
         try:
