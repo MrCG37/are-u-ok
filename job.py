@@ -212,8 +212,8 @@ class Job:
             notifier.send(f"{today} 打卡成功", "I'm fine, thank you.")
 
         # 上报体温
-        # success, msg = self._report_body_temperature()
-        # if not success:
-        #   notifier.send(f"{today} 上报体温失败", msg)
-        #   return
-        # notifier.send(f"{today} 上报体温成功", "I'm fine, really thank you.")
+        success, msg = self._report_body_temperature()
+        if not success:
+           notifier.send(f"{today} 上报体温失败", msg)
+           return
+        notifier.send(f"{today} 上报体温成功", "I'm fine, really thank you.")
